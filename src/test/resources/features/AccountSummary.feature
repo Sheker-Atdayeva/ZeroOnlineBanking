@@ -16,7 +16,7 @@ Feature: Account Summary page
       | Credit Accounts     |
       | Loan Accounts       |
 
-#    And "Credit Accounts" table must have following columns
-#      | Account     |
-#      | Credit Card |
-#      | Balance     |
+    And Credit Accounts table must have following columns
+      | Account     |
+      | Credit Card |
+      | Balance     |

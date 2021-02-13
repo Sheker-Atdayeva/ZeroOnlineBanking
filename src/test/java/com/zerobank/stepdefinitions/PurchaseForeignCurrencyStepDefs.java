@@ -1,7 +1,6 @@
 package com.zerobank.stepdefinitions;
 
 import com.zerobank.pages.AccountSummaryPage;
-import com.zerobank.pages.ErrorPage;
 import com.zerobank.pages.LoginPage;
 import com.zerobank.pages.PayBillsPage;
 import com.zerobank.utilities.BrowserUtils;

@@ -27,7 +27,7 @@ public class AccountActivityPage extends BasePage{
     @FindBy(css = "#aa_toDate")
     public WebElement toDateInput;
 
-    @FindBy(css = ".btn.btn-primary")
+    @FindBy(xpath = "//button[@type='submit']")
     public WebElement findBtn;
 
     @FindBy(id = "aa_description")

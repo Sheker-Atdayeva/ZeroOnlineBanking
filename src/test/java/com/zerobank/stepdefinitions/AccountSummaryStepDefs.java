@@ -7,6 +7,7 @@ import com.zerobank.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 
 import java.util.List;
 
@@ -29,8 +30,9 @@ public class AccountSummaryStepDefs {
         Assert.assertEquals(expectedAccountTypes, actualAccountTypes);
     }
 
-    @Then("{string} table must have following columns")
-    public void table_must_have_following_columns(String string, List<String> expectedTableColumns) {
-
+    @Then("Credit Accounts table must have following columns")
+    public void table_must_have_following_columns(List<String> expectedTableColumns) {
+        List<String> actualTableColumns = BrowserUtils.getElementsText(Driver.get().findElements(By.xpath("(//table[@class='table'])[3]/thead//th")));
+        Assert.assertEquals(expectedTableColumns,actualTableColumns);
     }
 }

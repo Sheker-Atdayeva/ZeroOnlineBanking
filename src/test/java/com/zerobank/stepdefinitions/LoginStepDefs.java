@@ -1,6 +1,5 @@
 package com.zerobank.stepdefinitions;
 
-import com.zerobank.pages.ErrorPage;
 import com.zerobank.pages.LoginPage;
 import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.ConfigurationReader;
