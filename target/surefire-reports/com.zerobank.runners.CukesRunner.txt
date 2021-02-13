@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.zerobank.runners.CukesRunner
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 94.265 s <<< FAILURE! - in com.zerobank.runners.CukesRunner
+Type(Find Transactions in Account Activity)  Time elapsed: 15.975 s  <<< FAILURE!
+java.lang.AssertionError
+
