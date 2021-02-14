@@ -52,7 +52,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsStepDefs.the_user_accesses_the_Find_Transactions_tab()"
+  "location": "com.zerobank.stepdefinitions.FindTransactionStepDefs.the_user_accesses_the_Find_Transactions_tab()"
 });
 formatter.result({
   "status": "passed"
@@ -64,6 +64,9 @@ formatter.scenario({
   "tags": [
     {
       "name": "@findtrans"
+    },
+    {
+      "name": "@wip"
     }
   ]
 });
@@ -72,7 +75,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsStepDefs.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
+  "location": "com.zerobank.stepdefinitions.FindTransactionStepDefs.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
@@ -82,7 +85,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsStepDefs.clicks_search()"
+  "location": "com.zerobank.stepdefinitions.FindTransactionStepDefs.clicks_search()"
 });
 formatter.result({
   "status": "passed"
@@ -92,5 +95,62 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.zerobank.stepdefinitions.FindTransactionsStepDefs.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
+  "location": "com.zerobank.stepdefinitions.FindTransactionStepDefs.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the results should be sorted by most recent date",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.zerobank.stepdefinitions.FindTransactionStepDefs.the_results_should_be_sorted_by_most_recent_date()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user enters date range from \"2012-09-02\" to \"2012-09-06\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.zerobank.stepdefinitions.FindTransactionStepDefs.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "clicks search",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.zerobank.stepdefinitions.FindTransactionStepDefs.clicks_search()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "results table should only show transactions dates between \"2012-09-02\" to \"2012-09-06\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.zerobank.stepdefinitions.FindTransactionStepDefs.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the results table should only not contain transactions dated \"2012-09-01\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.zerobank.stepdefinitions.FindTransactionStepDefs.the_results_table_should_only_not_contain_transactions_dated(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
 });

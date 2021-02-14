@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,7 +59,9 @@ public class AccountActivityPage extends BasePage{
         List<String> depositList = new ArrayList<>();
         for(int i=1; i<=raws.size(); i++){
             WebElement cell = Driver.get().findElement(By.xpath("//div[@id='filtered_transactions_for_account']//tbody/tr["+i+"]/td[3]"));
+            if(!cell.getText().isBlank()) {
                 depositList.add(cell.getText());
+            }
         }
         return depositList;
     }
@@ -67,13 +70,18 @@ public class AccountActivityPage extends BasePage{
         List<String> withdrawalList = new ArrayList<>();
         for(int i=1; i<=raws.size(); i++){
             WebElement cell = Driver.get().findElement(By.xpath("//div[@id='filtered_transactions_for_account']//tbody/tr["+i+"]/td[4]"));
+            if(!cell.getText().isBlank()) {
                 withdrawalList.add(cell.getText());
+            }
         }
         return withdrawalList;
     }
 
-    public WebElement getType(String type){
-        return Driver.get().findElement(By.xpath("//select[@id='aa_type']/option[.='"+ type +"']"));
+    public void clickType(String type){
+        Select stateDropdown = new Select(typeDropdown);
+        stateDropdown.selectByVisibleText(type);
+        findBtn.click();
+
     }
 
     public void cleanAllBox(){

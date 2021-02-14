@@ -6,7 +6,7 @@ Feature: Find Transactions in Account Activity
     And the user is logged in
     And the user navigates to "Account Activity" tab
     And the user accesses the Find Transactions tab
-
+  @wip
   Scenario: Search date range
     When the user enters date range from "2012-09-01" to "2012-09-06"
     And clicks search
@@ -34,7 +34,6 @@ Feature: Find Transactions in Account Activity
     And clicks search
     Then results table should only show descriptions containing "ONLINE"
 
-  @wip
   Scenario: Type
     And clicks search
     Then results table should show at least one result under Deposit

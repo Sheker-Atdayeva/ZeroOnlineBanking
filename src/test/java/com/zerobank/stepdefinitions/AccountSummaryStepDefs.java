@@ -16,7 +16,7 @@ public class AccountSummaryStepDefs {
     @When("the user navigates to {string} tab")
     public void the_user_navigates_to_tab(String tabName) {
         new AccountSummaryPage().navigateToModule(tabName);
-        BrowserUtils.waitForPageToLoad(6);
+        BrowserUtils.waitForPageToLoad(3);
     }
 
     @Then("the {string} page should have the title {string}")

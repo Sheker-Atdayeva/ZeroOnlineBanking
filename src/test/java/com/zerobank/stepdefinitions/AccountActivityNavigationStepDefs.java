@@ -23,7 +23,7 @@ public class AccountActivityNavigationStepDefs {
     @When("the user clicks on {string} link on the Account Summary page")
     public void the_user_clicks_on_link_on_the_Account_Summary_page(String linkName) {
         new AccountSummaryPage().openLink(linkName);
-        BrowserUtils.waitForPageToLoad(3);
+        BrowserUtils.waitForPageToLoad(2);
     }
 
     @Then("the {string} page should be displayed")
