@@ -20,7 +20,7 @@ import java.util.List;
 public class FindTransactionsStepDefs {
 
     @Given("the user accesses the Find Transactions tab")
-    public void the_user_accesses_the_Find_Transactions_tab() {
+    public void the_user_accesses_the_Find_Transactions_tab() throws InterruptedException {
         new AccountSummaryPage().navigateToModule("Account Activity");
         new AccountActivityPage().FindTransactionsTab.click();
     }
@@ -33,8 +33,9 @@ public class FindTransactionsStepDefs {
     }
 
     @When("clicks search")
-    public void clicks_search(){
+    public void clicks_search() throws InterruptedException {
         new AccountActivityPage().findBtn.click();
+        BrowserUtils.waitFor(4);
         new AccountActivityPage().cleanAllBox();
     }
 

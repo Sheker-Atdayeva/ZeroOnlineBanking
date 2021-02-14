@@ -26,9 +26,5 @@ public class AccountSummaryPage extends BasePage{
 
     }
 
-    public void getTableColumnsList(String tableName){
-
-    }
-
 
 }
