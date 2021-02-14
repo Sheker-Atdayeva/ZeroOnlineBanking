@@ -20,7 +20,7 @@ import java.util.List;
 public class FindTransactionsStepDefs {
 
     @Given("the user accesses the Find Transactions tab")
-    public void the_user_accesses_the_Find_Transactions_tab() throws InterruptedException {
+    public void the_user_accesses_the_Find_Transactions_tab() {
         new AccountSummaryPage().navigateToModule("Account Activity");
         new AccountActivityPage().FindTransactionsTab.click();
     }
@@ -33,7 +33,7 @@ public class FindTransactionsStepDefs {
     }
 
     @When("clicks search")
-    public void clicks_search() throws InterruptedException {
+    public void clicks_search(){
         new AccountActivityPage().findBtn.click();
         BrowserUtils.waitFor(4);
         new AccountActivityPage().cleanAllBox();
@@ -116,12 +116,19 @@ public class FindTransactionsStepDefs {
 
     @Then("results table should show no result under Withdrawal")
     public void results_table_should_show_no_result_under_Withdrawal() {
-        Assert.assertEquals(0,new AccountActivityPage().getWithdrawalList().size());
+        for(String str: new AccountActivityPage().getWithdrawalList())
+        {
+            Assert.assertTrue(str.isBlank());
+        }
+
     }
 
     @Then("results table should show no result under Deposit")
     public void results_table_should_show_no_result_under_Deposit() {
-        Assert.assertEquals(0,new AccountActivityPage().getDepositList().size());
+        for(String str: new AccountActivityPage().getDepositList())
+        {
+            Assert.assertTrue(str.isBlank());
+        }
     }
 
 
